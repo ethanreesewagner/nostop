@@ -179,4 +179,7 @@ stopwords=['i',
  "wouldn't"]
 
 def nostop(text): 
-    return " ".join([i for i in text.split(" ") if i not in stopwords and i not in [i.title() for i in stopwords]])
+	try:
+		return " ".join([i for i in text.split(" ") if i not in stopwords and i not in [i.title() for i in stopwords]])
+	except:
+		pass
